@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/b1"
+    tools:context=".DashboardActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="20dp"
+            android:text="Dashboard"
+            android:textColor="@color/black"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toTopOf="@+id/eventDetailsLayout"
+            app:layout_constraintEnd_toStartOf="@+id/signOutButton"
+            app:layout_constraintHorizontal_bias="0.533"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.142" />
+
+        <Button
+            android:id="@+id/signOutButton"
+            android:layout_width="111dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="#5DDBA7"
+            android:text="Log Out"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/eventDetailsLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView6"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.137" />
+
+        <LinearLayout
+            android:id="@+id/eventDetailsLayout"
+            android:layout_width="372dp"
+            android:layout_height="431dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:minHeight="480dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/createEventBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+            <TextView
+                android:id="@+id/eventCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="24dp"></TextView>
+        </LinearLayout>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/createEventBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="177dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="178dp"
+            android:layout_marginBottom="15dp"
+            android:clickable="true"
+            app:backgroundTint="#5DDBA7"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/eventDetailsLayout"
+            app:srcCompat="@android:drawable/ic_input_add"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+
